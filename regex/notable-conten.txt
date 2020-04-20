@@ -1,0 +1,43 @@
+-- this is the notable content for this topic --
+
+/***************************REGEX PATTER************************/
+
+/regex_here/ - regexes need to be placed between forward slashes
+/regA|regB/ - we case use or ( | ) to choose among the items
+/regex/i - the flag i will ignore the case of the regex ( flags are appended at the end of the regex)
+
+/regex/g - if this regex is used in match() method, if there is a repetition of string regex, then it will return that amount of repetition.
+    'Regex, Regex, Regex' : will return ['Regex','Regex','Regex']
+
+/regex/gi - this is a sample of multiple flagging (g and i flag)
+
+/regex./ - if we include the `.` ( signifies wildcard), we could search for string with pattern 'regex' so 'regexa' or 'regexb' would match 
+    if used with wildcard.
+/.regex/ - wildcard but the pattern is behind other character.
+    NOTE: i think when you use in between like /re...gex/ when there is `re and any 3 characters then gex` would match.
+/b[aei]g/ - the [characters] is a class of character. If this is used in match(), the string `bag`, `beg` and `big` would match
+          - use with flags and wildcard to have more flexibility
+
+/b[a-e]g/ - using hyphen, you can declare a range of leters. in this example is : a b c d e ( a to e)
+/b[a-z0-9]g/ - range with number. just put the number range beside the alphabet range
+/b[^oe^0-9]g/ - negate or exclude search by using ^ character. This regex will not match with bog,beg and b(number)g since they are negated
+/bo+/
+
+
+        
+
+
+/************************** JS METHODS FOR REGULAR EXPRESSIONS **************************/
+regex.test("sampleString") - will search for regex in the sample string 
+sampleString.match(regex) - will cut out the match string in the sampleString and return it. ( basically equal to regex string)
+    NOTE: based on the tutorial, the returned value is just the entry of that string in an array but when i ran it,
+    the returned array is like this:
+        ['returned_string",index_found,input_string,groups]
+            returned_string : is the string you are matching
+            index_found : on what index the regex is found 
+            input : the input string
+            groups : not so sure.
+        BUT!!!! When there is a flag g, (atleast at the moment), the returned value is just the array of the selected regex. 
+        I think this is the case for repetitive regex.
+
+
