@@ -9,3 +9,4 @@ and one type for mutable items:
     Object. 
 
 Note that in JavaScript, arrays are technically a type of object.
+
