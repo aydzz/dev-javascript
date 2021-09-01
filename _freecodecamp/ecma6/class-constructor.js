@@ -18,10 +18,16 @@ class SpaceShuttleB {
     constructor(targetPlanet) {
       this.targetPlanet = targetPlanet;
     }
+
+    sample(){
+        return 10;
+    }
+    
   }
   const zeusB = new SpaceShuttleB('Jupiter');
   console.log(zeusB);
   console.log(zeus);
+  console.log(zeusB.sample())
 
 let someObject = {};
     someObject["sample"] = zeus;
