@@ -11,11 +11,13 @@ const mypromise = new Promise((res,rej) => {
     let condition = false;
     console.log(typeof(res));
     console.log(typeof(rej));
+    console.log((res.toString()));
+    console.log((rej.toString()));
     if(condition){
         
-        res("PUTANGINA KA");
+        res("success");
     }else{
-        rej("GAGO MALE")
+        rej("fail")
     }
 });
 
@@ -26,3 +28,9 @@ mypromise.then((res)=>{
 }).finally(function(){
     console.log("I think talagang kahit ano lang dito, since FINALLY NGA.")
 });
+
+mypromise.then(function(res){
+    console.log("new" + res)
+},function(err){
+    console.log("new" + err);
+});;
