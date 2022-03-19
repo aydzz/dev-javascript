@@ -1,2 +1,2 @@
-# ProgrammingExercises-JS
- JS console programs
+# DEV - Javascript
+Code samples using javascript
